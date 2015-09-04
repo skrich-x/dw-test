@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <meta charset="utf-8">
+    <title>Instructions - Front-End Developer Test</title>
+</head>
+<body>
+
+	<h1>Concepts included in this test</h1>
+		<ul>
+			<li>Manipulating Form Submission and Validation via JS</li>
+			<li>Cookies (setting/getting)</li>
+			<li>HTML5 Input Attributes</li>
+			<li>Graceful Degradation/Modernizr</li>
+			<li>Styling forms</li>
+			<li>Adding CSS/JS/jQuery to the header</li>
+			<li>Setup Bower to add libraries to the page</li>
+			<li>Setup Grunt/Gulp to compile JS and SASS</li>
+		</ul>
+
+	<h1>Instructions</h1>
+
+	<h2>Setup</h2>
+
+	1. Add jQuery Library<br>
+	2. Add External Stylesheet<br>
+	3. Add External JS file to contain all JavaScript<br>
+
+	<h2>Design</h2>
+	1. Style Form: Remove list bullets, align fields into 2 columns, style input width according to their expected lengths.<br>
+	2. Test that design is consistent in IE7+, Chrome, Firefox, Safari
+
+	<h2>JavaScript Development</h2>
+	<h3>On Page Load</h3>
+	1. Hide company field and setup event on commercial radio input to show company field when this radio button is selected.<br>
+	2. Add HTML5 default placeholder attribute to add default values. Use modernizr for feature detection and offer backup JavaScript for browsers that dont support HTML5 input attributes.<br>
+	3. Phone Input - Only allow numbers to be entered.<br>
+	4. Zip Code Input - Only allow numbers and maximum of 5 digits.
+
+	
+	<h3>On Form Submission</h3>
+	1. Setup regular expression on email address to validate that its a real email address, throw error if not match.<br>
+	2. Compare the values in Email Address and Confirm Email Address and make sure they match on submit. If not, display an error message. Disable paste function on confirm email address field.<br>
+	3. If State value is equal to NY, CA, or MA - show a message on submit saying that we are unable to ship wine to those states and hide submit button. If different state is chosen, onblur - check against eligible states and if can ship to then re-enable submit button.<br>
+	4. Setup regular expression on phone number to validate that its a real US phone number, throw error if not match.<br>
+	5. Setup HTML5 require attribute on the following fields: email, first name, last name, address 1, city, state, zip, phone. Use modernizr for feature detection and offer backup JavaScript for browsers that dont support HTML5 input attributes. Highlight fields that are missing values. <br>
+	
+	<h2>Bonus</h2>
+	1. Get all values from form inputs and store in an array. Hide completed form and use values in array and format as (below) on the page in place of the form.<br>
+	First Name Last Name<br>
+	Address 1<br>
+	City, State, Zip<br>
+	Phone<br>
+	2. Setup HTML5 Boilerplate
+	3. Rewrite State Select and remove states we cannot ship to (MD, PA)<br>
+	4. Add logging to check values/statements in console.<br>
+	5. Set a cookie after successful form submission. After page refresh, load page - read cookie and hide form. Display message that the form has already been filled out and submitted.<br>
+	6. Use HTML5 geolocation to set State value when the page has loaded.<br>
+	7. Make it responsive<br>
+
+	<h2>Advanced Challenge</h2>
+	Run thru Rebecca Murphey's JS Assessment and score at least 75% (no cheating):
+	https://github.com/rmurphey/js-assessment <br>
+
+
+
+</body>
+</html>
