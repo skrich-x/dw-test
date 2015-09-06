@@ -3,7 +3,7 @@
 
   $(document).ready(function(){
 
-  //// Hide Company Input field on page load / Show on click of Radio button
+  //// Hide Company Input field on page load / Show on click of Radio button ////
     $("#shipping-company").hide();
       $("#commercial").click(function(){
         $("#shipping-company").show();
@@ -20,6 +20,23 @@
     $("#zip").keypress(function (event) {
       return  /\d/.test(String.fromCharCode(event.keyCode));
     });
-    
+
+
+  //// Use jquery validation for valid email ////
+
+    $("#shipping-form").validate({
+      rules: {
+        emailAddress: {
+          required: true,
+          email: true
+        },
+
+        emailAddressConfirm: {
+          required: true,
+          email: true,
+          equalTo: "#emailAddress"
+        }
+      }
+    });
   });
 })();
