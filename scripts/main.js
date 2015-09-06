@@ -9,5 +9,17 @@
         $("#shipping-company").show();
     });
 
+  ///Validate Number Keypress For Phone Number - 10 Character MAX///
+    $("#phone").attr('maxlength','10');
+    $("#phone").keypress(function (event) {
+      return  /\d/.test(String.fromCharCode(event.keyCode));
+    });
+
+  ///Validate Number Keypress For Zip -- 5 Character MAX///
+    $("#zip").attr('maxlength', '5');
+    $("#zip").keypress(function (event) {
+      return  /\d/.test(String.fromCharCode(event.keyCode));
+    });
+    
   });
 })();
