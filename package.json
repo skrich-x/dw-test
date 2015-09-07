@@ -9,7 +9,6 @@
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
     "gulp-concat": "^2.5.2",
-    "gulp-connect-php": "0.0.5",
     "gulp-declare": "^0.3.0",
     "gulp-handlebars": "^4.0.0",
     "gulp-load-plugins": "^0.10.0",
