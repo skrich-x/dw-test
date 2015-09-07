@@ -116,27 +116,24 @@
       /// Get Value of selected state here ///
         var state = $("select.state").val();
         console.log(state);
-
+      /// If state is invalid shipping State ///
+        if (state === "NY" || state ==="CA" || state ==="MA" || state ==="PA" || state ==="MD"){
+          console.log("cannotShip");
+        }else{
       //// Use Map to get New array of form values ///
         var formValues = $("input").map(function(){
           return $(this).val();
         }).get();
 
-            formValues.splice(7, 0, state);
-      /// Console Log new array from map with State inserted at appropriate index ///
+      /// Insert state in existing mapped array @ specific Index ///
+        formValues.splice(7, 0, state);
+
+      /// Console Log new array  ///
         console.log(formValues);
-
-      },
-
-    //   noship: function(){
-    //     var state = $("select.state").val();
-    //     if(state === "NY" || "CA" || "MA" || "MD" || "PA"){
-    //     console.log("cannot ship");
-    //   }
-    // }
+      }
+    }
 
     });
-
   });
 
 })();
