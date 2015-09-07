@@ -4,7 +4,9 @@
 
   var gulp = require('gulp');
   var $ = require('gulp-load-plugins')();
+  var php = require('gulp-connect-php');
   var browserSync = require('browser-sync');
+
   var reload = browserSync.reload;
 
   gulp.task('styles', function () {
@@ -34,6 +36,21 @@
       .pipe(gulp.dest('dist/scripts/'))
       .pipe(reload({stream: true}));
   });
+
+  gulp.task('php', function() {
+    php.server({ base: 'build', port: 8010, keepalive: true});
+});
+gulp.task('browser-sync',['php'], function() {
+    browserSync({
+        proxy: '127.0.0.1:8010',
+        port: 8080,
+        open: true,
+        notify: false
+    });
+});
+gulp.task('default', ['browser-sync'], function () {
+    gulp.watch(['build/*.php'], [reload]);
+});
 
   gulp.task('build', ['scripts', 'styles'], function(){});
 
