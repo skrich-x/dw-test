@@ -1,3 +1,45 @@
-html{
-  background-color: #44948F;
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+///Include Partials///
+@include "colors";
+@include "typography";
+
+body {
+  font-family: $base-font-family;
+  font-size: 62.5%;
+  background-color: $background-gray;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style: none;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.center-container{
+  @include outer-container(1080px);
+}
+
+.header{
+  color: $blue;
+  font-size: 4em;
+}
+
+#shipping-form{
+  @include span-columns(10);
+  @include shift(1);
 }
