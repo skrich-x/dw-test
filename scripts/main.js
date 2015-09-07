@@ -91,27 +91,19 @@
           required: "Please provide a valid US phone number"
         }
       },
-      submitHandler: function() {
-        var data = $("#shipping-form").serialize();
 
-          $.post("form.php", data, function(e){
-            console.log(e);
-          }, 'json');
+      submitHandler: function(){
+        //// Use Map to get New array of form values.
 
+          var formValues = $("input").map(function(){
+          return $(this).val();
+          }).get();
+          /// Console Log array created with map method.
+          console.log(formValues);
       }
+
     });
 
-    //
-
-
-      // //// Use Map to get New array of form values.
-      // $("#shippping-form").submit(function(event){
-        //
-        // var formValues = $("input").map(function(){
-        // return $(this).val();
-        // }).get();
-        // /// Console Log array created with map method.
-        // console.log(formValues);
-      });
+  });
 
 })();
