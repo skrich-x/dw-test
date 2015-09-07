@@ -21,6 +21,26 @@
       return  /\d/.test(String.fromCharCode(event.keyCode));
     });
 
+    ///Prevent Cut Copy Paste on email conformation///
+    $('#email_address_confirm').bind("cut copy paste",function(e) {
+      e.preventDefault();
+    });
+
+    // $("#shipping-state[name=no-ship]").val(function(){
+    //   conosle.log(this);
+    // });
+
+
+    // noShip = function(){
+    //   // 'email': $('input[name=email]').val(),
+    //   var ship-state = $("#shipping-state[name=no-ship]").val(),
+    //   //   if( ship-state === "NY" || "CA" || "MA" || "MD" || "PA"){
+    //   //     return true;
+    //   //   }
+    //   //   else{
+    //   //     return this.optional(element);
+    //   // }
+    // };
 
     //// Use jquery validation to create rules and messages objects ////
     $("#shipping-form").validate({
@@ -93,17 +113,27 @@
       },
 
       submitHandler: function(){
-        //// Use Map to get New array of form values.
-
-          var formValues = $("input").map(function(){
+      /// Get Value of selected state here ///
+        var state = $("select.state").val();
+        console.log(state);
+      /// If state is invalid shipping State ///
+        if (state === "NY" || state ==="CA" || state ==="MA" || state ==="PA" || state ==="MD"){
+          console.log("cannotShip");
+        }else{
+      //// Use Map to get New array of form values ///
+        var formValues = $("input").map(function(){
           return $(this).val();
-          }).get();
-          /// Console Log array created with map method.
-          console.log(formValues);
+        }).get();
+
+      /// Insert state in existing mapped array @ specific Index ///
+        formValues.splice(7, 0, state);
+
+      /// Console Log new array  ///
+        console.log(formValues);
       }
+    }
 
     });
-
   });
 
 })();
