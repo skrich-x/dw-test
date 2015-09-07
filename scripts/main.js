@@ -21,6 +21,9 @@
       return  /\d/.test(String.fromCharCode(event.keyCode));
     });
 
+    $('#email_address_confirm').bind("cut copy paste",function(e) {
+      e.preventDefault();
+    });
 
     //// Use jquery validation to create rules and messages objects ////
     $("#shipping-form").validate({
