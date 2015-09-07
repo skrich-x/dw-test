@@ -90,7 +90,18 @@
         phone: {
           required: "Please provide a valid US phone number"
         }
+      },
+      submitHandler: function() {
+        var data = $("#shipping-form").serialize();
+
+          $.post("form.php", data, function(e){
+            console.log(e);
+          }, 'json');
+
       }
+    });
+
+    //
 
 
       // //// Use Map to get New array of form values.
@@ -102,8 +113,5 @@
         // /// Console Log array created with map method.
         // console.log(formValues);
       });
-
-
-    });
 
 })();
