@@ -20,7 +20,7 @@
 body {
   font-family: $base-font-family;
   font-size: 62.5%;
-  background-color: $background-gray;
+  background-color: $feature-gray;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -50,5 +50,6 @@ span{
 }
 
 div.error{
-  color:red;
+  color:$red;
+  font-size: 1.5em;
 }

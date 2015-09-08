@@ -1,5 +1,18 @@
 @media (min-width : 320px) and (max-width: 799px){
 
+  .thankyou{
+
+    @include span-columns(11);
+    @include shift(.5);
+    margin-top: 3em;
+    margin-bottom:1.5em;
+    background-color: $background-gray;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    font-size: 1em;
+    border-radius: 3px;
+
+  }
+
   input{
     width: 100%;
     padding-top: .25em;
@@ -16,8 +29,10 @@
   }
 
   .shipping-header{
-    margin-top: 2em;
-    font-size: 2em;
+    margin-top: .5em;
+    font-size: 4em;
+    font-weight: 200;
+    color:$teal;
   }
 
   #shipping-form{
@@ -25,7 +40,7 @@
     @include shift(.5);
     margin-top: 3em;
     margin-bottom:1.5em;
-    background-color: #fff;
+    background-color: $background-gray;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
     font-size: 1em;
     border-radius: 3px;
@@ -58,7 +73,7 @@
     color: #ccc;
     font-style: italic;
   }
-  
+
   #commercial[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
@@ -67,7 +82,11 @@
   .submit-button{
     @include span-columns(10);
     @include shift(1);
-    margin-bottom: 2em;
+    margin-bottom: .5em;
+    color: #fff;
+    background-color: $teal;
+    border: 1px solid $feature-gray;
+    border-radius: 2px;
   }
 
   //safari and chrome dropdown heights//

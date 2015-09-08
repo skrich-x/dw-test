@@ -119,7 +119,7 @@ $(document).ready(function(){
               formValues.splice(7, 0, state);
 
               /// Replace form with form input ///
-              $("#shipping-form").replaceWith("<div>" + "<h1>" + [formValues[2]] + " " + [formValues[3]] + "</h1>" + "<h1>" + [formValues[4]] + "</h1>" + "<h1>" + [formValues[5]] + [formValues[7]] + " " + [formValues[8]] + "</h1>" + "<h1>" + [formValues[9]] + "</h1>" + "</div>" );
+              $("#shipping-form").replaceWith("<div class='thankyou'>" + "<h1>" + "Thank You for Submitting you Info!!" + "</h1>"  + "<h1>" + [formValues[2]] + " " + [formValues[3]] + "</h1>" + "<h1>" + [formValues[4]] + "</h1>" + "<h1>" + [formValues[5]] + [formValues[7]] + " " + [formValues[8]] + "</h1>" + "<h1>" + [formValues[9]] + "</h1>" + "</div>" );
 
               /// Console Log new array  ///
               console.log(formValues);
