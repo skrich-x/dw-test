@@ -4,9 +4,12 @@
 ///Include Partials///
 @import "colors";
 @import "typography";
+@import "variables";
+
+///Media Queries///
 @import "mobile";
 @import "desktop";
-@import "variables";
+
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

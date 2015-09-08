@@ -67,6 +67,7 @@
     color: #ccc;
     font-style: italic;
   }
+  
   #commercial[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
@@ -87,5 +88,23 @@
           line-height:30px;
           background:#f4f4f4;
       }
+
+    }
+  //Target Firefox dropdown //
+  @-moz-document url-prefix() {
+      select {
+        width: 100%;
+        font-size: 2em;
+        height:47px;
+        line-height:30px;
+        background:#f4f4f4;
+        padding: 0!important;
+      }
+      /*Remove button padding in Firefox*/
+      select::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
   }
 }

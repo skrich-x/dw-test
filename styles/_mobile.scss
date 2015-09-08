@@ -1,6 +1,5 @@
 @media (min-width : 320px) and (max-width: 799px){
 
-
   input{
     width: 100%;
     padding-top: .25em;
@@ -59,6 +58,7 @@
     color: #ccc;
     font-style: italic;
   }
+  
   #commercial[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
@@ -73,12 +73,29 @@
   //safari and chrome dropdown heights//
     @media screen and (-webkit-min-device-pixel-ratio:0) {
       select {
+          width: 100%;
           font-size: 2em;
-          height:30px;
+          height:47px;
           line-height:30px;
           background:#f4f4f4;
       }
+
+    }
+  //Target Firefox dropdown //
+  @-moz-document url-prefix() {
+      select {
+        width: 100%;
+        font-size: 2em;
+        height:47px;
+        line-height:30px;
+        background:#f4f4f4;
+        padding: 0!important;
+      }
+      /*Remove button padding in Firefox*/
+      select::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
   }
-
-
 }
