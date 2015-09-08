@@ -2,7 +2,7 @@
 
 ### Project for Direct Wines
 
-## For Development
+## For Development & Testing
 * `git clone` this repository
 * `npm install`
 * `bower install`
