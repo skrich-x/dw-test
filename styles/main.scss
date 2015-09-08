@@ -2,8 +2,9 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 ///Include Partials///
-@include "colors";
-@include "typography";
+@import "colors";
+@import "typography";
+@import "mobile";
 
 body {
   font-family: $base-font-family;
@@ -22,6 +23,7 @@ a{
 
 ul{
   list-style: none;
+  padding:none;
 }
 
 *, *:after, *:before {
@@ -42,4 +44,21 @@ ul{
 #shipping-form{
   @include span-columns(10);
   @include shift(1);
+  background-color: #fff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+input{
+  height: 30px;
+}
+
+label{
+  display: block;
+}
+.checkout{
+  @include span-columns(12);
+}
+
+.submit-button{
+  @include span-columns(8);
 }
