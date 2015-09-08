@@ -2,8 +2,16 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 ///Include Partials///
-@include "colors";
-@include "typography";
+@import "colors";
+@import "typography";
+@import "mobile";
+@import "variables";
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
   font-family: $base-font-family;
@@ -22,24 +30,51 @@ a{
 
 ul{
   list-style: none;
-}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  padding-left: 0;
 }
 
 .center-container{
   @include outer-container(1080px);
 }
 
-.header{
-  color: $blue;
-  font-size: 4em;
+div.error{
+  color:red;
 }
 
-#shipping-form{
-  @include span-columns(10);
-  @include shift(1);
-}
+// .header{
+//   color: $blue;
+//   font-size: 4em;
+// }
+//
+// .shipping-header{
+//   margin-top: 2em;
+// }
+//
+// #shipping-form{
+//   @include span-columns(10);
+//   @include shift(1);
+//   margin-top: 3em;
+//   background-color: #fff;
+//   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+// }
+//
+// input{
+//   height: 30px;
+// }
+//
+// label{
+//   display: block;
+// }
+// .checkout{
+//   @include span-columns(12);
+//   list-style: none;
+//   padding:none;
+//
+// }
+//
+//
+// .submit-button{
+//   @include span-columns(8);
+//   @include shift(2);
+//   margin-bottom: 2em;
+// }

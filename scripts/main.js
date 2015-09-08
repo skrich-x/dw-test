@@ -33,7 +33,9 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
-
+    $.validator.setDefaults({
+      errorElement: 'div'
+    });
 
     $("#shipping-form").validate({
       rules: {
