@@ -4,8 +4,12 @@
 ///Include Partials///
 @import "colors";
 @import "typography";
-@import "mobile";
 @import "variables";
+
+///Media Queries///
+@import "mobile";
+@import "desktop";
+
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -16,12 +20,12 @@
 body {
   font-family: $base-font-family;
   font-size: 62.5%;
-  background-color: $background-gray;
-  text-align: center;
+  background-color: $feature-gray;
 }
 
 h1,h2,h3,h4,h5,h6{
   margin:0;
+  text-align: center;
 }
 
 a{
@@ -33,48 +37,19 @@ ul{
   padding-left: 0;
 }
 
+p{
+  font-size: 2em;
+}
+
+span{
+  font-size: 1.5em;
+}
+
 .center-container{
   @include outer-container(1080px);
 }
 
 div.error{
-  color:red;
+  color:$red;
+  font-size: 1.5em;
 }
-
-// .header{
-//   color: $blue;
-//   font-size: 4em;
-// }
-//
-// .shipping-header{
-//   margin-top: 2em;
-// }
-//
-// #shipping-form{
-//   @include span-columns(10);
-//   @include shift(1);
-//   margin-top: 3em;
-//   background-color: #fff;
-//   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-// }
-//
-// input{
-//   height: 30px;
-// }
-//
-// label{
-//   display: block;
-// }
-// .checkout{
-//   @include span-columns(12);
-//   list-style: none;
-//   padding:none;
-//
-// }
-//
-//
-// .submit-button{
-//   @include span-columns(8);
-//   @include shift(2);
-//   margin-bottom: 2em;
-// }
