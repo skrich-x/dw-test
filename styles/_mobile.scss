@@ -49,8 +49,17 @@
     @include shift(.5);
   }
 
-  #commercial{
-    width:auto;
+  #commercial[type=checkbox] {
+    width: 30px;
+  }
+
+  #commercial[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+  }
+  #commercial[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
   }
 
   .submit-button{
