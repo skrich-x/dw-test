@@ -37,6 +37,10 @@ ul{
   @include outer-container(1080px);
 }
 
+div.error{
+  color:red;
+}
+
 // .header{
 //   color: $blue;
 //   font-size: 4em;
