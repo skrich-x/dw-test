@@ -1,0 +1,120 @@
+@media (min-width : 320px) and (max-width: 799px){
+
+  .thankyou{
+
+    @include span-columns(11);
+    @include shift(.5);
+    margin-top: 3em;
+    margin-bottom:1.5em;
+    background-color: $background-gray;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    font-size: 1em;
+    border-radius: 3px;
+
+  }
+
+  input{
+    width: 100%;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    padding-left: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+  }
+
+  .header{
+    color: $blue;
+    font-size: 3em;
+  }
+
+  .shipping-header{
+    margin-top: .5em;
+    font-size: 4em;
+    font-weight: 200;
+    color:$teal;
+  }
+
+  #shipping-form{
+    @include span-columns(11);
+    @include shift(.5);
+    margin-top: 3em;
+    margin-bottom:1.5em;
+    background-color: $background-gray;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    font-size: 1em;
+    border-radius: 3px;
+  }
+
+  .checkout label{
+    @include span-columns(11);
+    @include shift(.5);
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .state{
+    @include span-columns(10);
+    @include shift(1);
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .checkout{
+    @include span-columns(11);
+    @include shift(.5);
+  }
+
+  #commercial[type=checkbox] {
+    width: 30px;
+  }
+
+  #commercial[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+  }
+
+  #commercial[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
+  }
+
+  .submit-button{
+    @include span-columns(10);
+    @include shift(1);
+    margin-bottom: .5em;
+    color: #fff;
+    background-color: $teal;
+    border: 1px solid $feature-gray;
+    border-radius: 2px;
+  }
+
+  //safari and chrome dropdown heights//
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      select {
+          width: 100%;
+          font-size: 2em;
+          height:47px;
+          line-height:30px;
+          background:#f4f4f4;
+      }
+
+    }
+  //Target Firefox dropdown //
+  @-moz-document url-prefix() {
+      select {
+        width: 100%;
+        font-size: 2em;
+        height:47px;
+        line-height:30px;
+        background:#f4f4f4;
+        padding: 0!important;
+      }
+      /*Remove button padding in Firefox*/
+      select::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
+  }
+}

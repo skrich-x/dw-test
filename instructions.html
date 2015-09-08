@@ -37,14 +37,14 @@
 	3. Phone Input - Only allow numbers to be entered.<br>
 	4. Zip Code Input - Only allow numbers and maximum of 5 digits.
 
-	
+
 	<h3>On Form Submission</h3>
 	1. Setup regular expression on email address to validate that its a real email address, throw error if not match.<br>
 	2. Compare the values in Email Address and Confirm Email Address and make sure they match on submit. If not, display an error message. Disable paste function on confirm email address field.<br>
 	3. If State value is equal to NY, CA, or MA - show a message on submit saying that we are unable to ship wine to those states and hide submit button. If different state is chosen, onblur - check against eligible states and if can ship to then re-enable submit button.<br>
 	4. Setup regular expression on phone number to validate that its a real US phone number, throw error if not match.<br>
 	5. Setup HTML5 require attribute on the following fields: email, first name, last name, address 1, city, state, zip, phone. Use modernizr for feature detection and offer backup JavaScript for browsers that dont support HTML5 input attributes. Highlight fields that are missing values. <br>
-	
+
 	<h2>Bonus</h2>
 	1. Get all values from form inputs and store in an array. Hide completed form and use values in array and format as (below) on the page in place of the form.<br>
 	First Name Last Name<br>

@@ -1,0 +1,55 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+///Include Partials///
+@import "colors";
+@import "typography";
+@import "variables";
+
+///Media Queries///
+@import "mobile";
+@import "desktop";
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: 62.5%;
+  background-color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  text-align: center;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+p{
+  font-size: 2em;
+}
+
+span{
+  font-size: 1.5em;
+}
+
+.center-container{
+  @include outer-container(1080px);
+}
+
+div.error{
+  color:$red;
+  font-size: 1.5em;
+}
