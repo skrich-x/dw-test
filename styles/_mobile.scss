@@ -5,6 +5,7 @@
     width: 100%;
     padding-top: .25em;
     padding-bottom: .25em;
+    padding-left: .5em;
     margin-top: 1em;
     margin-bottom: 1em;
     font-size: 2.5em;
@@ -35,6 +36,7 @@
     @include span-columns(11);
     @include shift(.5);
     font-size: 1.5em;
+    text-align: center;
   }
 
   .state{

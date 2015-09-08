@@ -20,18 +20,21 @@
     		<form id="shipping-form" name="product-form" action"" method="post">
 
     			<div id="shipping-address-container">
+
     				<div class="section-header">
     					<h2 class="shipping-header">Shipping Information</h2>
     				</div>
+
     				<ul class="checkout" id="shipping-address">
     					<li id="shipping-email">
     						<label>Email Address</label>
     						<input type="email"  id="email_address" name="email_address" placeholder="your@email.com">
     					</li>
     					<li id="shipping-email">
-    						<label>Confrim Email Address</label>
+    						<label>Confrim Email</label>
     						<input type="email"  id="email_address_confirm" name="email_address_confirm" placeholder="your@email.com">
     					</li>
+
     					<li id="shipping-fname">
     						<label>  First Name </label>
     						<input id="first_name" name="first_name" maxlength="15"  value="" type="text" placeholder="First Name">
@@ -40,6 +43,10 @@
     						<label>  Last Name </label>
     						<input id="last_name" name="last_name" maxlength="19"  value=""  type="text" placeholder="Last Name">
     					</li>
+
+            <div class="column_1">
+
+
     					<li id="shipping-addr1">
     						<label>  Address 1 </label>
     						<input id="address_1" name="address_1" maxlength="35"  value="" type="text" placeholder="Enter an address">
@@ -48,10 +55,17 @@
     						<label> Address 2 </label>
     						<input id="address_2" name="address_2" maxlength="35"  value="" type="text" placeholder="Apt Number">
     					</li>
+
+
     					<li id="shipping-city">
     						<label> City </label>
     						<input id="city"  name="city" value="" type="text" placeholder="City">
     					</li>
+            </div>
+
+
+              <div class="column_2">
+
     					<li id="shipping-state">
     						<label> State </label>
     						<select class="state">
@@ -112,10 +126,14 @@
     						<label>Zip</label>
     							<input id="zip" name="zip" maxlength="5"  value="" type="text" placeholder="Zip Code">
     					</li>
+
     					<li id="shipping-phone">
-    						<label>Phone </label>
+    						<label>Phone</label>
     						<input id="phone" name="phone" maxlength="10"  value="" type="text" placeholder="000-000-0000" >
     					</li>
+            </div>
+            <div class="commercial-section"
+
     					<li id="shipping-toggle">
                 <p>Is this address for a business? </p>
                 <input id="commercial" value="Commercial" type="checkbox">
@@ -127,6 +145,7 @@
     						<label> Company Name </label>
     						<input id="company" value="" type="text" placeholder="Company Name">
     					</li>
+            </div>
     				</ul>
     			</div>
 
