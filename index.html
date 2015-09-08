@@ -31,27 +31,27 @@
 
           <li id="shipping-email">
             <label>Email Address</label>
-            <input type="email" id="email_address" name="email_address" placeholder="your@email.com">
+            <input type="email" id="email_address" name="email_address" placeholder="your@email.com" required>
           </li>
           <li id="shipping-email">
             <label>Confrim Email</label>
-            <input type="email" id="email_address_confirm" name="email_address_confirm" placeholder="your@email.com">
+            <input type="email" id="email_address_confirm" name="email_address_confirm" placeholder="your@email.com" required>
           </li>
 
           <li id="shipping-fname">
             <label> First Name </label>
-            <input id="first_name" name="first_name" maxlength="15" value="" type="text" placeholder="First Name">
+            <input id="first_name" name="first_name" maxlength="15" value="" type="text" placeholder="First Name" required>
           </li>
           <li id="shipping-lname">
             <label> Last Name </label>
-            <input id="last_name" name="last_name" maxlength="19" value="" type="text" placeholder="Last Name">
+            <input id="last_name" name="last_name" maxlength="19" value="" type="text" placeholder="Last Name" required>
           </li>
 
           <div class="column_1">
 
             <li id="shipping-addr1">
               <label> Address 1 </label>
-              <input id="address_1" name="address_1" maxlength="35" value="" type="text" placeholder="Enter an address">
+              <input id="address_1" name="address_1" maxlength="35" value="" type="text" placeholder="Enter an address" required>
             </li>
             <li id="shipping-addr2">
               <label> Address 2 </label>
@@ -59,7 +59,7 @@
             </li>
             <li id="shipping-city">
               <label> City </label>
-              <input id="city" name="city" value="" type="text" placeholder="City">
+              <input id="city" name="city" value="" type="text" placeholder="City" required>
             </li>
 
           </div>
@@ -124,12 +124,12 @@
             </li>
             <li id="shipping-zip">
               <label>Zip</label>
-              <input id="zip" name="zip" maxlength="5" value="" type="text" placeholder="Zip Code">
+              <input id="zip" name="zip" maxlength="5" value="" type="text" placeholder="Zip Code" required>
             </li>
 
             <li id="shipping-phone">
               <label>Phone</label>
-              <input id="phone" name="phone" maxlength="10" value="" type="text" placeholder="000-000-0000">
+              <input id="phone" name="phone" maxlength="10" value="" type="text" placeholder="000-000-0000" required>
             </li>
           </div>
 
@@ -151,6 +151,17 @@
       <input class="submit-button" type="submit" value="Submit Form" />
 
     </form>
+
+    <div id="thank-you">
+      <h1 id="first-last"></h1>
+      <h1 id="address-replace"></h1>
+      <h1 id="city-state-zip"></h1>
+      <h1 id="phone-replace"></h1>
+    </div>
+      <!-- First Name Last Name
+Address 1
+City, State, Zip
+Phone -->
 
     <!-- Third Party Scripts -->
     <script src="bower_components/commonjs-require/commonjs-require.js"></script>

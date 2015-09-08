@@ -4,13 +4,7 @@
 $(document).ready(function(){
     var state = $("select.state").val();
 
-    // $("select.state").blur(function(state){
-    //   if (state === "NY" || state === "CA" || state === "MA" || state === "PA" || state === "MD"){
-    //       $(".submit-button").prop("disabled",true);
-    //     }
-    // });
-
-    //// Hide Company Input field on page load / Show on click of Radio button ////
+    //// Hide Company Input field on page load / Show on click of Checkbox ////
     $("#shipping-company").hide();
       $("#commercial").click(function(){
         $("#shipping-company").toggle();
@@ -33,10 +27,12 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
+    ///Set Validator error to Div///
     $.validator.setDefaults({
       errorElement: 'div'
     });
 
+    ///Use jquery validate to create rules and messages objects///
     $("#shipping-form").validate({
       rules: {
         ///confirm email is valid and confirmation matches///
@@ -55,7 +51,6 @@ $(document).ready(function(){
           required: true,
           phoneUS: true
         },
-
 
         /// Other Required Fields ///
         first_name: {
@@ -105,6 +100,8 @@ $(document).ready(function(){
         }
       },
 
+      ///Handling submit action through jquery validate///
+
       submitHandler: function(){
       /// Get Value of selected state here ///
           var state = $("select.state").val();
@@ -114,19 +111,20 @@ $(document).ready(function(){
                 alert("Due to State Law we are unable to ship to this state, at this time. We apoligize for any inconvenience ");
             }else{
               //// Use Map to get New array of form values ///
-            var formValues = $("input").map(function(){
-              return $(this).val();
-            }).get();
+              var formValues = $("input").map(function(){
+                return $(this).val();
+              });
 
-            /// Insert state in existing mapped array @ specific Index ///
-            formValues.splice(7, 0, state);
+              /// Insert state in existing mapped array @ specific Index ///
+              formValues.splice(7, 0, state);
 
-            /// Console Log new array  ///
-            console.log(formValues);
+              /// Replace form with form input ///
+              $("#shipping-form").replaceWith("<div>" + "<h1>" + [formValues[2]] + " " + [formValues[3]] + "</h1>" + "<h1>" + [formValues[4]] + "</h1>" + "<h1>" + [formValues[5]] + [formValues[7]] + " " + [formValues[8]] + "</h1>" + "<h1>" + [formValues[9]] + "</h1>" + "</div>" );
+
+              /// Console Log new array  ///
+              console.log(formValues);
           }
         }
-
       });
     });
-
 })();
