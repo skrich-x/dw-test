@@ -13,7 +13,7 @@ $(document).ready(function(){
     //// Hide Company Input field on page load / Show on click of Radio button ////
     $("#shipping-company").hide();
       $("#commercial").click(function(){
-        $("#shipping-company").show();
+        $("#shipping-company").toggle();
     });
 
     ///Validate Number Keypress For Phone Number - 10 Character MAX///

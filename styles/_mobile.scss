@@ -1,5 +1,6 @@
 @media (min-width : 320px) and (max-width: 799px){
 
+
   input{
     width: 100%;
     padding-top: .25em;
@@ -39,11 +40,17 @@
   .state{
     @include span-columns(10);
     @include shift(1);
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   .checkout{
     @include span-columns(11);
     @include shift(.5);
+  }
+
+  #commercial{
+    width:auto;
   }
 
   .submit-button{
